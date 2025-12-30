@@ -5,6 +5,7 @@ import {Body} from "./components/Body";
 import "./index.css";
 
 const AppLayout = () => {
+  console.log(<body/>); // this is the virtual DOM
   return (
     <div className="app">
       <Header />
