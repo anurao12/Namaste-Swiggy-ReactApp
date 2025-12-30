@@ -1,25 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-
-/**
- * Header
- *    - logo
- *    - nav items
- * Body
- *    - search
- *    - RestaurantContainer
- *      - restaurantCard
- *          - img
- *          - Name of Res, star rating, Cuisine, delevery time
- * Footer
- *     - copyright
- *     - links
- *     - Address
- *     - Contact
- */
-
-const resObj = {
+const RES_LIST = {
                 "type": "restaurant",
                 "info": {
                     "resId": 52924,
@@ -175,63 +154,4 @@ const resObj = {
                 "bottomContainers": []
             }
 
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-xseGCh1McOhf83EKqr7L9tfzFXKE3cEHLA&s"
-        />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const RestaurantCard = (props) => {
-    const {resData} = props
-    return(
-  <div className="res-card" style={{backgroundColor: '#f0f0f0'}}>
-    <img alt="Veg Biryani" className="res-logo" height="144" loading="lazy" width="156" src="https:\/\/b.zmtcdn.com\/data\/pictures\/4\/52924\/8992b8a83811fd4bed7dd97d1aec5f04_o2_featured_v2.jpg"/>
-    <h3>{resData.info.name}</h3>
-    <h5>{resData.info.cuisine.map((x) => x.name)
-    .join(", ")}</h5>
-    <h5>{resData.info.rating.rating_text}</h5>
-    <h5>{resData.info.cft.text}</h5>
-    <h5>{resData.order.deliveryTime} Minutes</h5>
-  </div>
-    )
-};
-
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="resto-Container">
-        <RestaurantCard  resData={resObj} />
-        {/* <RestaurantCard resName="Burger King" Cuisine="Italian, Burger, Coke" starRating="4 star" deleveryTime="20 minutes" /> */}
-      </div>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default RES_LIST;
