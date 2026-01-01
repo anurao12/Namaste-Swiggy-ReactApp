@@ -47,4 +47,16 @@
 
     - diff Algorithm => finds the difference between 2 virtual DOM then it will update the actual DOM
 
+
+# Monolith Architecture
+
+    - every service is in one project
+
+# microservice Architecture
+    - UI service
+    - notification service
+    - backend service
+    - Auth service
+    - DB service
+
     
