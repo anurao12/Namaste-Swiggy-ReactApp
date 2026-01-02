@@ -31,9 +31,24 @@
  # React Hooks
 
 # Normal Js Utility Function
+
+    always call hooks inside component.
+    try to call these hooks at the top.
+    dont create useState inside if condition.
+    
 ---------------------------------
 - useEffect()
 - useState() = maintain state variable in react component 
+
+
+
+# useEffect
+  - useEffect is called every component renders, becz of the dependency array it changes the renderer
+        if there is no dependency array it calls every render.
+    if the dependency array is empty - then useEffect is called on initial render and just once.
+    if we put something in the dependency array. it calles the useEffect only when the dependency changes.
+
+
 
 ------------------------------------------------------------------------------
 # React 
@@ -58,5 +73,10 @@
     - backend service
     - Auth service
     - DB service
+
+
+
+
+
 
     
